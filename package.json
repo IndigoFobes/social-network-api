@@ -1,0 +1,24 @@
+{
+  "name": "social-network-api",
+  "version": "1.0.0",
+  "description": "back end of a social networking app",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IndigoFobes/social-network-api.git"
+  },
+  "author": "indigo fobes",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/IndigoFobes/social-network-api/issues"
+  },
+  "homepage": "https://github.com/IndigoFobes/social-network-api#readme",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemone index"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.13"
+  }
+}
