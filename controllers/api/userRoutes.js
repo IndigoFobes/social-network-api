@@ -20,3 +20,5 @@ const router = require('express').Router();
     // POST to add a new friend to user's friends list
 
     // DELETE to remove a friend from friends list
+
+    module.exports = router;
