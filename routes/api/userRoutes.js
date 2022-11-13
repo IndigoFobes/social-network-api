@@ -1,6 +1,5 @@
-const { ObjectId } = require('mongoose').Types; // what is this .Types for?
-const { User, Thought, Reaction } = require('../../models');
 const router = require('express').Router();
+// require all of the controller methods
 
 // /api/users(/:userId)
 
