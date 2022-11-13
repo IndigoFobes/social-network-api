@@ -15,7 +15,7 @@ const router = require('express').Router();
 
     // DELETE to remove user by _id
 
-// /api/users/:userId/friends/:friendId
+// /api/users/:userId/friends/:friendId 
 
     // POST to add a new friend to user's friends list
 
