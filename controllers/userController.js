@@ -22,20 +22,20 @@ module.exports = {
         User.findOne({ _id: req.params.userId })
         .select('-__v')
         .then(async (user) => {
-            const userObject = {
-                user,
-                friendCount
-            };
             if (!user) {
                 res.status(404).json({ message: 'No user with that ID' });
             }
-            return res.json(userObject);
+            return res.json(user);
         })
         .catch((err) => res.status(500).json(err));
-    }
+    },
 
     // POST a new user
-
+    createUser(req, res) {
+        User.create(req.body)
+        .then((user) => res.json(user))
+        .catch((err) => res.status(500).json(err))
+    },
 
     // PUT to update user by _id
 

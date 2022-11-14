@@ -2,19 +2,18 @@ const router = require('express').Router();
 // require all of the controller methods
 const {
 getUsers,
-getSingleUser
+getSingleUser,
+createUser
 } = require('../../controllers/userController');
 
 // /api/users(/:userId)
 
-    // GET all users
-    router.route('/').get(getUsers);
+    // GET all users  /  POST a new user
+    router.route('/').get(getUsers).post(createUser);
 
     // GET a single user by _id, populate thought + friend data upon this request
     router.route('/:userId').get(getSingleUser)
     // essentially when you check one persons instagram, and you see all of their posts and their friends list
-
-    // POST a new user
 
     // PUT to update user by _id
 
