@@ -19,3 +19,5 @@ const router = require('express').Router();
     // POST a reaction stored in a thoughts reaction array field
 
     // DELETE to pull and remove reaction by reactionId
+
+module.exports = router;

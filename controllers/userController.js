@@ -9,11 +9,7 @@ module.exports = {
     getUsers(req, res) {
         User.find()
         .then(async (users) => {
-            const userObject = {
-                users,
-                friendCount: await friendCount
-            };
-            return res.json(userObject);
+            return res.json(users);
         })
         .catch((err) => {
             console.log(err);
@@ -22,9 +18,24 @@ module.exports = {
     },
 
     // GET a single user by _id, populate thought + friend data upon this request
-    // essentially when you check one persons instagram, and you see all of their posts and their friends list
+    getSingleUser(req, res) {
+        User.findOne({ _id: req.params.userId })
+        .select('-__v')
+        .then(async (user) => {
+            const userObject = {
+                user,
+                friendCount
+            };
+            if (!user) {
+                res.status(404).json({ message: 'No user with that ID' });
+            }
+            return res.json(userObject);
+        })
+        .catch((err) => res.status(500).json(err));
+    }
 
     // POST a new user
+
 
     // PUT to update user by _id
 
