@@ -43,14 +43,37 @@ module.exports = {
         : res.status(200).json(user)
         )
         .catch((err) => res.status(500).json(err));
-    }
+    },
+
     // PUT to update a thought by _id
+    updateThought(req, res) {
+        Thought.findOneAndUpdate(
+            { _id: req.params.thoughtId},
+            { $set: req.body },
+            { runValidators: true, new: true }
+        )
+        .then((thought) => 
+        !thought
+        ? res.status(404).json({ message: "No thought with this ID!" })
+        : res.status(200).json(thought))
+        .catch((err) => res.status(500).json(err));
+    },
 
     // DELETE a thought by _id
-
+    deleteThought(req, res) {
+        Thought.findOneAndRemove(
+            { _id: req.params.thoughtId },
+        )
+        .then((thought) =>
+        !thought
+        ? res.status(404).json({ message: "No thought with this ID!" })
+        : res.status(200).json({message: "Thought deleted.", thought}))
+        .catch((err) => res.status(500).json(err));
+    }
 // /api/thoughts/:thoughtId/reactions
 
     // POST a reaction stored in a thoughts reaction array field
+    
 
     // DELETE to pull and remove reaction by reactionId
 }
