@@ -38,6 +38,19 @@ module.exports = {
     },
 
     // PUT to update user by _id
+    updateUser(req, res) {
+        User.findOneAndUpdate(
+            { _id: req.params.userId },
+            { $set: req.body },
+            { runValidators: true, new: true }
+        )
+            .then((user) => 
+            !user
+            ? res.status(404).json({ message: "No user found with that ID!" })
+            : res.status(200).json(user)
+            )
+            .catch((err) => res.status(500).json(err));
+    },
 
     // DELETE to remove user by _id
     deleteUser(req, res) {
