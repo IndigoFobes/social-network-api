@@ -4,7 +4,7 @@
 
 ## Description
 
-This is the backend for a social media app. It was built using MongoDB for the database, Express.js for routing, and a Mongoose ODM. It includes routes for user creation, deletion, update, adding/deleting friends, adding, updating and deleting thoughts, and adding and deleting reactions to thoughts.
+This is the backend for a social media app. It was built using MongoDB for the database, Express.js for routing, and a Mongoose ODM. It includes routes for user creation, deletion, update; adding and deleting friends; adding, updating and deleting thoughts; and adding and deleting reactions to thoughts.
 
 ## Table of Contents
 
