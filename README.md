@@ -4,7 +4,7 @@
 
 ## Description
 
-This is the backend for a social media app. It was built using MongoDB for the database, Express.js for routing, and Mongoose ODM. It includes routes for user creation, deletion, update, adding/deleting friends, adding, updating and deleting thoughts, and adding and deleting reactions to thoughts.
+This is the backend for a social media app. It was built using MongoDB for the database, Express.js for routing, and a Mongoose ODM. It includes routes for user creation, deletion, update, adding/deleting friends, adding, updating and deleting thoughts, and adding and deleting reactions to thoughts.
 
 ## Table of Contents
 
@@ -17,13 +17,13 @@ This is the backend for a social media app. It was built using MongoDB for the d
 
 ## Installation
 
-Clone my code and run npm i to install the dependencies. Run node (or nodemon) start to run server. Also note, there are no seeds, but you are welcome to add seed to the util file.
+Clone my code and run `npm i` to install the dependencies. Run `node start` to run server. Also note, there are no seeds, but you are welcome to add seed to the util file.
 
 <a name="usage"></a>
 
 ## Usage
 
-Up to the front-end developer. Perform basic fetch requests to work with the data.
+It is up to the front-end developer how they might use this api. Perform basic fetch requests to work with the data.
 
 https://user-images.githubusercontent.com/105685042/201986940-7894c870-5732-4557-b4fc-68fdcc0e7254.mp4
 
@@ -31,7 +31,7 @@ https://user-images.githubusercontent.com/105685042/201986940-7894c870-5732-4557
 
 ## License
 
-This application is licenced under Unlicense
+This application is licenced under Unlicense.
 
 <a name="questions"></a>
 
