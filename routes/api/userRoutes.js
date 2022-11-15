@@ -3,7 +3,8 @@ const router = require('express').Router();
 const {
 getUsers,
 getSingleUser,
-createUser
+createUser,
+deleteUser
 } = require('../../controllers/userController');
 
 // /api/users(/:userId)
@@ -12,12 +13,13 @@ createUser
     router.route('/').get(getUsers).post(createUser);
 
     // GET a single user by _id, populate thought + friend data upon this request
-    router.route('/:userId').get(getSingleUser)
+    router.route('/:userId').get(getSingleUser).delete(deleteUser);
     // essentially when you check one persons instagram, and you see all of their posts and their friends list
 
     // PUT to update user by _id
 
     // DELETE to remove user by _id
+
 
 // /api/users/:userId/friends/:friendId 
 

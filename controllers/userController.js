@@ -40,7 +40,18 @@ module.exports = {
     // PUT to update user by _id
 
     // DELETE to remove user by _id
-
+    deleteUser(req, res) {
+        User.findOneAndRemove({ _id: req.params.userId })
+        .then((user) => 
+        !user
+        ? res.status(404).json({ message: "No user found with that ID!" })
+        : res.status(200).json({ message: "User successfully deleted!" })
+        )
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+    },
 // /api/users/:userId/friends/:friendId 
 
     // POST to add a new friend to user's friends list
