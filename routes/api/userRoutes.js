@@ -6,7 +6,8 @@ getSingleUser,
 createUser,
 updateUser,
 deleteUser,
-addFriend
+addFriend,
+deleteFriend
 } = require('../../controllers/userController');
 
 // /api/users(/:userId)
@@ -23,8 +24,8 @@ addFriend
 // /api/users/:userId/friends/:friendId 
 
     // POST to add a new friend to user's friends list
-    router.route('/:userId/friends/:friendId').post(addFriend);
-
     // DELETE to remove a friend from friends list
+    router.route('/:userId/friends/:friendId').post(addFriend).delete(deleteFriend);
 
+    
     module.exports = router;
