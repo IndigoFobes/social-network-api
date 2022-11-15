@@ -25,10 +25,9 @@ Clone my code and run npm i to install the dependencies. Run node (or nodemon) s
 
 Up to the front-end developer. Perform basic fetch requests to work with the data.
 
-<a name="license"></a>
-
 https://user-images.githubusercontent.com/105685042/201986940-7894c870-5732-4557-b4fc-68fdcc0e7254.mp4
 
+<a name="license"></a>
 
 ## License
 
