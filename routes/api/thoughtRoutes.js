@@ -1,12 +1,15 @@
-const { ObjectId } = require('mongoose').Types; // what is this .Types for?
-const { User, Thought, Reaction } = require('../../models');
 const router = require('express').Router();
-
+const {
+    getThoughts,
+    getSingleThought,
+    createThought,
+} = require('../../controllers/thoughtController')
 // /api/thoughts
 
     // GET all thoughts
-
+    router.route('/').get(getThoughts).post(createThought);
     // GET a single thought by _id
+    router.route('/:thoughtId').get(getSingleThought);
 
     // POST a new thought (** push created thought to associated user's thoughts array field) ??
 
